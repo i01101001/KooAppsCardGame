@@ -83,16 +83,41 @@ public class CardMonoBehaviour : MonoBehaviour
     private string getCardDescriptionText(CardType cardType)
     {
         string cardDescriptionText = "";
+        if (refCard.cardAbilities.Count > 0)
+        {
+            cardDescriptionText += getCardAbilitiesText();
+            cardDescriptionText += "\n";
+        }
         switch (cardType)
         {
             case CardType.TicketCard:
-                cardDescriptionText = getTicketCardDescription();
+                cardDescriptionText += getTicketCardDescription();
                 break;
             case CardType.EmployeeCard:
-                cardDescriptionText = getEmployeeCardDescription() ;
+                cardDescriptionText += getEmployeeCardDescription();
                 break;
         }
         return cardDescriptionText;
+    }
+
+    private string getCardAbilitiesText()
+    {
+        string cardAbilitiesText = "";
+        foreach(Ability ability in refCard.cardAbilities)
+        {
+            switch (ability.getAbilityType())
+            {
+                case AbilityType.StunAbility:
+                    StunAbility stunAbility = (StunAbility)ability;
+                    cardAbilitiesText += stunAbility.getFormattedAbilityDescription();
+                    break;
+                default:
+                    cardAbilitiesText += ability.abilityDescription;
+                    break;
+            }
+            cardAbilitiesText += "\n";
+        }
+        return cardAbilitiesText;
     }
 
     private string getTicketCardDescription()

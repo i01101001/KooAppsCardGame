@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa29799efafe817438f54890823bae7a, type: 3}
-  m_Name: Anthony
+  m_Name: Alex
   m_EditorClassIdentifier: 
-  cardName: Anthony
-  cardImage: {fileID: 21300000, guid: 7781e990a3784b84ba78c6ad492ada7b, type: 3}
-  employeeVelocity: 3
+  cardName: Alex
+  cardImage: {fileID: 21300000, guid: 18f59851635fdb6498c9680ec8707198, type: 3}
+  cardAbilities: []
+  employeeVelocity: 22
   employeeType: 0
   employeeAffinityList:
-  - affinityName: iOS
-    affinityValue: 3
-  - affinityName: Genshin
-    affinityValue: 5
+  - affinityName: everything
+    affinityValue: 25

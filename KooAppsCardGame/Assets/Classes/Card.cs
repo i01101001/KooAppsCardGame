@@ -5,6 +5,7 @@ using UnityEngine;
 using System;
 
 [Serializable]
+[CreateAssetMenu(fileName = "Card", menuName = "ScriptableObjects/Card")]
 public abstract class Card : ScriptableObject
 {
     public const string cardFileName = "card";
@@ -12,7 +13,7 @@ public abstract class Card : ScriptableObject
     public Sprite cardImage;
     protected bool isCardConsumable;
 
-    //public List<CardAbility> cardAbilities;
+    public List<Ability> cardAbilities;
     //public List<CardModifier> cardModifiers;
     public abstract CardType getCardType();
     public abstract KooappsType getKooappsType();

@@ -665,5 +665,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 147340074191203197, guid: 05ecd09e089608640aca64efc124aa16, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074782043580492543, guid: 05ecd09e089608640aca64efc124aa16, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730762347894260105, guid: 05ecd09e089608640aca64efc124aa16, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7781e990a3784b84ba78c6ad492ada7b, type: 3}
+    - target: {fileID: 6944352786699208407, guid: 05ecd09e089608640aca64efc124aa16, type: 3}
+      propertyPath: refCard
+      value: 
+      objectReference: {fileID: 11400000, guid: 287de2cc276a6e143a3da1d14173fc67, type: 2}
+    - target: {fileID: 9069861220706556823, guid: 05ecd09e089608640aca64efc124aa16, type: 3}
+      propertyPath: m_text
+      value: '+3 attack to iOS
+
+        +5 attack to Genshin
+
+
+
+        Send a joke
+        to #random and\ntarget employee cannot work\nfor 5 turns
+
+'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05ecd09e089608640aca64efc124aa16, type: 3}
