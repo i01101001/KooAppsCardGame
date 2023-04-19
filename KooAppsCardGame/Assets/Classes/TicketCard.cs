@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "TicketCard", menuName = "ScriptableObjects/TicketCard")]
 public class TicketCard : BaseCard
 {
     public int ticketHours;

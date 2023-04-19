@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+[CreateAssetMenu(fileName = "EmployeeCard", menuName = "ScriptableObjects/EmployeeCard")]
 public class EmployeeCard : BaseCard
 {
     public int employeeVelocity;

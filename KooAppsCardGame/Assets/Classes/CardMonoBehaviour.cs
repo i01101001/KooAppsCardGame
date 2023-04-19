@@ -5,9 +5,10 @@ using TMPro;
 using UnityEngine.UI;
 
 [ExecuteInEditMode]
-public class CardViewModel : MonoBehaviour
+public class CardMonoBehaviour : MonoBehaviour
 {
     public SpriteRenderer cardImage;
+    public SpriteRenderer ticketIcon;
     public TextMeshPro cardNameText;
     public TextMeshPro cardDescriptionText;
     public TextMeshPro cardValueText;
@@ -15,17 +16,35 @@ public class CardViewModel : MonoBehaviour
     // Start is called before the first frame update
     private void OnValidate()
     {
-
+        if(refCard == null)
+        {
+            return;
+        }
         cardImage.sprite = refCard.cardImage;
         CardType refCardType = refCard.getCardType();
-        cardNameText.SetText(getCardNameText(refCardType));
-        cardDescriptionText.SetText(getCardDescriptionText(refCardType));
+        setCardName(refCardType);
+        setCardDescription(refCardType);
         setCardValueText(refCardType);
     }
 
-    public void updateViews()
+    private void setCardName(CardType cardType)
     {
-        OnValidate();
+        switch (cardType)
+        {
+            case CardType.TicketCard:
+                ticketIcon.enabled = true;
+                cardNameText.SetText(getCardNameText(cardType));
+                break;
+            default:
+                ticketIcon.enabled = false;
+                cardNameText.SetText(getCardNameText(cardType));
+                break;
+        }
+    }
+
+    private void setCardDescription(CardType cardType)
+    {
+        cardDescriptionText.SetText(getCardDescriptionText(cardType));
     }
 
     private string getCardNameText(CardType cardType)
@@ -54,6 +73,8 @@ public class CardViewModel : MonoBehaviour
                 return "HR";
             case KooappsType.Marketing:
                 return "Marketing";
+            case KooappsType.Server:
+                return "Server";
             default:
                 return "";
         }

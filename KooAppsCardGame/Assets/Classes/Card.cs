@@ -5,8 +5,9 @@ using UnityEngine;
 using System;
 
 [Serializable]
-public abstract class Card : MonoBehaviour
+public abstract class Card : ScriptableObject
 {
+    public const string cardFileName = "card";
     public string cardName;
     public Sprite cardImage;
     protected bool isCardConsumable;
